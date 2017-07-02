@@ -1,8 +1,8 @@
 latexindent.pl version 3.1, a script to indent .tex files
 	latexindent.pl lives here: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/
-	Sun Jul  2 15:47:01 2017
+	Sun Jul  2 16:24:30 2017
 Processing switches
-	-w|--overwrite: Overwrite mode active, will make a back up of /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/a7fb3319-06a6-4d01-8502-e31fe5a1a080.tex first
+	-w|--overwrite: Overwrite mode active, will make a back up of /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/d30e5110-c98f-40cf-a473-4b03529f6276.tex first
 Directory for backup files and indent.log: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files
 Perl modules are being loaded from the following directories:
 	/usr/share/perl/5.18/FindBin.pm
@@ -20,7 +20,7 @@ YAML settings read
 	To specify user settings you would put indentconfig.yaml here: /home/rodrigo/indentconfig.yaml
 	Alternatively, you can use the hidden file .indentconfig.yaml as: /home/rodrigo/.indentconfig.yaml
 Backup procedure (-w flag active):
-	copying /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/a7fb3319-06a6-4d01-8502-e31fe5a1a080.tex to /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/a7fb3319-06a6-4d01-8502-e31fe5a1a080.bak0
+	copying /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/d30e5110-c98f-40cf-a473-4b03529f6276.tex to /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/d30e5110-c98f-40cf-a473-4b03529f6276.bak0
 List of items: item|myitem (see itemNames)
 looking for VERBATIM commands (see verbatimCommands)
 looking for FILE CONTENTS environments (see fileContentsEnvironments)
@@ -43,7 +43,7 @@ Phase 2: finding surrounding indentation
 Phase 3: indenting objects
 Phase 4: final indentation check
 Output routine
-	Overwriting file /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/a7fb3319-06a6-4d01-8502-e31fe5a1a080.tex
+	Overwriting file /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/d30e5110-c98f-40cf-a473-4b03529f6276.tex
 --------------
 Please direct all communication/issues to: 
 	https://github.com/cmhughes/latexindent.pl
