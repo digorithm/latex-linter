@@ -1,0 +1,49 @@
+latexindent.pl version 3.1, a script to indent .tex files
+	latexindent.pl lives here: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/
+	Sat Jul  1 16:51:46 2017
+Processing switches
+	-w|--overwrite: Overwrite mode active, will make a back up of /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/ae11c1cf-0036-40eb-99e4-aa5fa1bf02f7.tex first
+Directory for backup files and indent.log: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files
+Perl modules are being loaded from the following directories:
+	/usr/share/perl/5.18/FindBin.pm
+	/usr/share/perl5/YAML/Tiny.pm
+	/usr/share/perl/5.18/File/Copy.pm
+	/usr/share/perl/5.18/File/Basename.pm
+	/usr/share/perl/5.18/Getopt/Long.pm
+	/usr/local/share/perl/5.18.2/File/HomeDir.pm
+	/usr/local/lib/perl/5.18.2/Unicode/GCString.pm
+Latex Indent perl modules are being loaded from, for example:
+	/home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/LatexIndent/Document.pm
+YAML settings read
+	Reading defaultSettings.yaml from /home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/defaultSettings.yaml
+	Home directory is /home/rodrigo (didn't find either indentconfig.yaml or .indentconfig.yaml)
+	To specify user settings you would put indentconfig.yaml here: /home/rodrigo/indentconfig.yaml
+	Alternatively, you can use the hidden file .indentconfig.yaml as: /home/rodrigo/.indentconfig.yaml
+Backup procedure (-w flag active):
+	copying /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/ae11c1cf-0036-40eb-99e4-aa5fa1bf02f7.tex to /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/ae11c1cf-0036-40eb-99e4-aa5fa1bf02f7.bak0
+List of items: myitem|item (see itemNames)
+looking for VERBATIM commands (see verbatimCommands)
+looking for FILE CONTENTS environments (see fileContentsEnvironments)
+	looking for filecontents*:1 environments
+	looking for filecontents:1 environments
+	FILECONTENTS environment found: filecontents
+	replaced with ID: LTXIN-TK-FILECONTENTS1-END
+	storing LTXIN-TK-FILECONTENTS1-END for indentation (filecontents found outside of preamble)
+Phase 1: searching for objects
+	looking for ENVIRONMENTS
+	looking for IFELSEFI
+	looking for HEADINGS (chapter, section, part, etc)
+	looking for COMMANDS and key = {value}
+	looking for SPECIAL begin/end
+Objects have been found.
+Operating on: masterDocument
+Number of children:
+	1
+Phase 2: finding surrounding indentation
+Phase 3: indenting objects
+Phase 4: final indentation check
+Output routine
+	Overwriting file /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/ae11c1cf-0036-40eb-99e4-aa5fa1bf02f7.tex
+--------------
+Please direct all communication/issues to: 
+	https://github.com/cmhughes/latexindent.pl
