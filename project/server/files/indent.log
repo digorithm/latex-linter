@@ -1,8 +1,8 @@
 latexindent.pl version 3.1, a script to indent .tex files
 	latexindent.pl lives here: /var/www/latex-linter/project/server/dependencies/latexindent.pl-master/
-	Fri Nov  3 19:54:28 2017
+	Fri Nov  3 20:46:04 2017
 Processing switches
-	-w|--overwrite: Overwrite mode active, will make a back up of /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex first
+	-w|--overwrite: Overwrite mode active, will make a back up of /var/www/latex-linter/project/server/files/e053906c-d0b4-46dd-bb68-b36f944b44ae.tex first
 Directory for backup files and indent.log: /var/www/latex-linter/project/server/files
 Perl modules are being loaded from the following directories:
 	/usr/share/perl/5.20/FindBin.pm
@@ -20,15 +20,12 @@ YAML settings read
 	To specify user settings you would put indentconfig.yaml here: /var/www/indentconfig.yaml
 	Alternatively, you can use the hidden file .indentconfig.yaml as: /var/www/.indentconfig.yaml
 Backup procedure (-w flag active):
-	copying /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex to /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.bak0
-List of items: myitem|item (see itemNames)
+	copying /var/www/latex-linter/project/server/files/e053906c-d0b4-46dd-bb68-b36f944b44ae.tex to /var/www/latex-linter/project/server/files/e053906c-d0b4-46dd-bb68-b36f944b44ae.bak0
+List of items: item|myitem (see itemNames)
 looking for VERBATIM commands (see verbatimCommands)
 looking for FILE CONTENTS environments (see fileContentsEnvironments)
 	looking for filecontents*:1 environments
 	looking for filecontents:1 environments
-	FILECONTENTS environment found: filecontents
-	replaced with ID: LTXIN-TK-FILECONTENTS1-END
-	storing LTXIN-TK-FILECONTENTS1-END for indentation (filecontents found outside of preamble)
 Phase 1: searching for objects
 	looking for ENVIRONMENTS
 	looking for IFELSEFI
@@ -43,7 +40,7 @@ Phase 2: finding surrounding indentation
 Phase 3: indenting objects
 Phase 4: final indentation check
 Output routine
-	Overwriting file /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex
+	Overwriting file /var/www/latex-linter/project/server/files/e053906c-d0b4-46dd-bb68-b36f944b44ae.tex
 --------------
 Please direct all communication/issues to: 
 	https://github.com/cmhughes/latexindent.pl

@@ -1,0 +1,325 @@
+%% This style is provided for the ICSE 2015 main conference,
+%% ICSE 2015 co-located events, and ICSE 2015 workshops.
+
+%% bare_conf_ICSE15.tex
+%% V1.4
+%% 2014/05/22
+
+
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{sig-alternate}
+
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Put edit comments in a really ugly standout display
+\usepackage{ifthen}
+\usepackage{amssymb}
+\usepackage{arydshln}
+\usepackage{hhline}
+\usepackage{xspace}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fixltx2e}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{balance}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Markup macros for proof-reading
+\usepackage[normalem]{ulem} % for \sout
+\usepackage{xcolor}
+\newcommand{\ra}{$\rightarrow$}
+\newcommand{\ugh}[1]{\textcolor{red}{\uwave{#1}}} % please rephrase
+\newcommand{\ins}[1]{\textcolor{blue}{\uline{#1}}} % please insert
+\newcommand{\del}[1]{\textcolor{red}{\sout{#1}}} % please delete
+\newcommand{\chg}[2]{\textcolor{red}{\sout{#1}}{\ra}\textcolor{blue}{\uline{#2}}} % please change
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Put edit comments in a really ugly standout display
+\usepackage{ifthen}
+\usepackage{amssymb}
+\newboolean{showcomments}
+\setboolean{showcomments}{false} % toggle to show or hide comments
+\ifthenelse{\boolean{showcomments}}
+  {\newcommand{\Note}[3]{\fcolorbox{gray}{#3}{\bfseries\sffamily\scriptsize#1}{\sf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}}}
+  {\newcommand{\Note}[3]{}}
+\newcommand{\todo}[1]{\Note{todo}{#1}{yellow}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cat}[1]{\Note{C. Albert}{#1}{pink}}
+\newcommand{\gm}[1]{\Note{Gail}{#1}{green}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\transitive{transition\xspace}
+\newcommand\issue{task\xspace}
+\newcommand\issues{tasks\xspace}
+\newcommand\tasks{task\xspace}
+\newcommand\task{tasks\xspace}
+\newcommand\mylyn{\texttt{Mylyn}\xspace}
+\newcommand\connect{\texttt{Connect}\xspace}
+\newcommand\hbase{\texttt{HBase}\xspace}
+\newcommand\apache{\texttt{Apache}\xspace}
+\newcommand\firefox{\texttt{Firefox}\xspace}
+\newcommand\eclipse{\texttt{Eclipse}\xspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Spacing changes!
+%\vspace{-0.2em}
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the jmynal or conference you plan
+% to submit to, of cmyse. )
+
+
+% correct bad hyphenation here
+\hyphenation{reposir-ories}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{A Study of Relationships in Issue Repositories}
+
+%\numberofauthors{4} %  in this sample file, there are a *total*
+%% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+%% reasons) and the remaining two appear in the \additionalauthors section.
+%%
+%\author{
+%
+
+%}
+
+\numberofauthors{4} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+%\author{
+%% You can go ahead and credit any number of authors here,
+%% e.g. one 'row of three' or two rows (consisting of one row of three
+%% and a second row of one, two or three).
+%%
+%% The command \alignauthor (no curly braces needed) should
+%% precede each author name, affiliation/snail-mail address and
+%% e-mail address. Additionally, tag each line of
+%% affiliation/address with \affaddr, and tag the
+%% e-mail address with \email.
+%%
+%% 1st. author
+%\alignauthor C. Albert Thompson \\
+%%       \affaddr{Department of Computer Science}\\
+%       \affaddr{Univ. of British Columbia}\\
+%%       \affaddr{Vancouver, B.C. Canada}\\
+%       \email{leetcat@cs.ubc.ca}
+%% 2nd. author
+%\alignauthor Gail C. Murphy\\
+%%%        \affaddr{Department of Computer Science}\\
+%        \affaddr{Univ. of British Columbia}\\
+%%%        \affaddr{Vancouver, B.C. Canada}\\
+%        \email{murphy@cs.ubc.ca}
+%% 3rd. author
+%\and
+% \alignauthor Marc Palyart\\
+%%%        \affaddr{Department of Computer Science}\\
+%        \affaddr{Univ. of British Columbia}\\
+%%%        \affaddr{Vancouver, B.C. Canada}\\
+%        \email{mpalyart@cs.ubc.ca}
+%%%          % use '\and' if you need 'another row' of author names
+%% 4th. author
+%\alignauthor Marko Gasparic\\
+%       \affaddr{Free Univ. of Bozen-Bolzano}\\
+%%%       \affaddr{Bozen-Bolzano, Italy}\\
+%       \email{marko.gasparic@stud-inf.unibz.it}
+%}
+% make the title area
+
+\author{
+	\begin{tabular}{@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}p{.5in}@{}}
+		\multicolumn{3}{p{1.7in}}{\centering C. Albert Thompson*} & \multicolumn{3}{p{1.5in}}{\centering Gail C. Murphy*} &
+		\multicolumn{3}{p{1.5in}}{\centering Marc Palyart\textsuperscript*} & \multicolumn{3}{p{1.5in}}{\centering Marko Gasparic\textsuperscript{$+$}} \\
+	\end{tabular}
+	\\
+	\begin{tabular}{@{}p{2.25in}@{}p{1.5in}@{}p{2.25in}@{}}
+		\centerline{*\affaddr{University of British Columbia}}                           &   & \centerline{\textsuperscript{$+$}\affaddr{Free University of Bozen-Bolzano}} \\ \\
+		\vspace{-17pt}\centerline{\affaddr{Vancouver, BC, Canada}}                       &   & \vspace{-17pt}\centerline{\affaddr{Bozen-Bolzano, Italy}}                    \\
+		\vspace{-17pt}\centerline{{\normalsize \{leetcat, murphy, mpalyart\}@cs.ubc.ca}} &   & \vspace{-17pt}\centerline{{\normalsize marko.gasparic@stud-inf.unibz.it}}
+	\end{tabular}
+}
+
+
+
+
+\maketitle
+
+
+\begin{abstract}
+	Software developers use issue trackers and define issues as a means of
+	specifying work to be performed on a system and defects that require
+	fixing.  Despite the manual effort developers invest in specifying
+	many relationships between issues, the vast majority of techniques
+	aimed at improving software development that rely on issues ignore
+	relationship information.  In this paper, we investigate how
+	developers use relationships between issues, finding that many
+	relationships are often specified and that the most prevalent use of
+	relationships is to describe how work should be broken into smaller
+	pieces.  We also found that there are few patterns in how words are
+	used between parent and child issues involved in a work breakdown
+	relationship, and through manual coding, determined seven codes that
+	describe the semantic meanings of the work breakdown relationships
+	specified across three open source systems.  We describe how the
+	recognition of work breakdown relationships may be used to improve
+	existing software development techniques and how the automatic
+	identification of work breakdown relationships opens up new
+	possibilities for auto-generation of child issues and consistency
+	checkers for work to be performed on a system.
+
+
+
+	%% Software developers use issue repositories for many purposes, from
+	%% recording features and how the features might be implemented to
+	%% defects that have been found and how those defects might be fixed.
+	%% The ways in which developers go about their work are recorded in issue
+	%% repositories in part by the organization of issue into hierarchies.
+	%% To better understand the issue hierarchies used in issue repositories,
+	%% we undertook a study of the hierarchies in the repositories for two
+	%% open source systems.  We applied two automated methods to analyze
+	%% syntactic patterns in relationships between issues. We then qualitatively
+	%% analyzed a subset of these pairs for their semantic meaning,
+	%% developing seven tags to represent this meaning, we
+	%% found that most issues in the three systems have child issues
+	%% which reference work breakdown.
+	%% This study of relationships in the of the structure of
+	%% issues in software development may aid in the development of
+	%% tools to recommend work breakdown that a developer might need to undertake,
+	%% in determining where processes are not being completely followed, or
+	%% in enhancing existing techniques for automatically determining who
+	%% should undertake particular tasks or which issues are duplicates of
+	%% each other.
+\end{abstract}
+
+% no keywords
+
+
+%\category{D.2.6}{Software Engineering}{Programming Environments}
+%\category{K.6.3}{Software Management}{Software development}
+%
+%\IEEEterms{Algorithms}
+
+%\begin{keywords}
+%repository mining, task categorization
+%\end{keywords}
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and                                                                       
+% creates the second title. It will be ignored for other modes.
+
+
+
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+\input{sections/intro}
+
+\input{sections/related}
+
+\input{sections/relationship}
+
+\input{sections/patterns}
+
+\input{sections/semantic}
+
+%\input{sections/hierarchy}
+
+\input{sections/discussion}
+
+\input{sections/summary}
+
+%\input{sections/questions}
+
+\input{sections/acknowledgments}
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+\balance
+
+\bibliographystyle{abbrv}
+\bibliography{ICSE2016_Categorization}
+
+% that's all folks
+\end{document}
