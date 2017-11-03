@@ -1,27 +1,27 @@
 latexindent.pl version 3.1, a script to indent .tex files
-	latexindent.pl lives here: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/
-	Fri Nov  3 08:25:23 2017
+	latexindent.pl lives here: /var/www/latex-linter/project/server/dependencies/latexindent.pl-master/
+	Fri Nov  3 19:54:28 2017
 Processing switches
-	-w|--overwrite: Overwrite mode active, will make a back up of /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/8a239b6a-cf39-4359-a814-f41b36a934d3.tex first
-Directory for backup files and indent.log: /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files
+	-w|--overwrite: Overwrite mode active, will make a back up of /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex first
+Directory for backup files and indent.log: /var/www/latex-linter/project/server/files
 Perl modules are being loaded from the following directories:
-	/usr/share/perl/5.18/FindBin.pm
-	/usr/share/perl5/YAML/Tiny.pm
-	/usr/share/perl/5.18/File/Copy.pm
-	/usr/share/perl/5.18/File/Basename.pm
-	/usr/share/perl/5.18/Getopt/Long.pm
-	/usr/local/share/perl/5.18.2/File/HomeDir.pm
-	/usr/local/lib/perl/5.18.2/Unicode/GCString.pm
+	/usr/share/perl/5.20/FindBin.pm
+	/usr/local/share/perl/5.20.2/YAML/Tiny.pm
+	/usr/share/perl/5.20/File/Copy.pm
+	/usr/share/perl/5.20/File/Basename.pm
+	/usr/share/perl/5.20/Getopt/Long.pm
+	/usr/local/share/perl/5.20.2/File/HomeDir.pm
+	/usr/local/lib/x86_64-linux-gnu/perl/5.20.2/Unicode/GCString.pm
 Latex Indent perl modules are being loaded from, for example:
-	/home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/LatexIndent/Document.pm
+	/var/www/latex-linter/project/server/dependencies/latexindent.pl-master/LatexIndent/Document.pm
 YAML settings read
-	Reading defaultSettings.yaml from /home/rodrigo/Dropbox/Projects/latex_linter/project/server/dependencies/latexindent.pl-master/defaultSettings.yaml
-	Home directory is /home/rodrigo (didn't find either indentconfig.yaml or .indentconfig.yaml)
-	To specify user settings you would put indentconfig.yaml here: /home/rodrigo/indentconfig.yaml
-	Alternatively, you can use the hidden file .indentconfig.yaml as: /home/rodrigo/.indentconfig.yaml
+	Reading defaultSettings.yaml from /var/www/latex-linter/project/server/dependencies/latexindent.pl-master/defaultSettings.yaml
+	Home directory is /var/www (didn't find either indentconfig.yaml or .indentconfig.yaml)
+	To specify user settings you would put indentconfig.yaml here: /var/www/indentconfig.yaml
+	Alternatively, you can use the hidden file .indentconfig.yaml as: /var/www/.indentconfig.yaml
 Backup procedure (-w flag active):
-	copying /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/8a239b6a-cf39-4359-a814-f41b36a934d3.tex to /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/8a239b6a-cf39-4359-a814-f41b36a934d3.bak0
-List of items: item|myitem (see itemNames)
+	copying /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex to /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.bak0
+List of items: myitem|item (see itemNames)
 looking for VERBATIM commands (see verbatimCommands)
 looking for FILE CONTENTS environments (see fileContentsEnvironments)
 	looking for filecontents*:1 environments
@@ -43,7 +43,7 @@ Phase 2: finding surrounding indentation
 Phase 3: indenting objects
 Phase 4: final indentation check
 Output routine
-	Overwriting file /home/rodrigo/Dropbox/Projects/latex_linter/project/server/files/8a239b6a-cf39-4359-a814-f41b36a934d3.tex
+	Overwriting file /var/www/latex-linter/project/server/files/600e3ee4-3ce0-4d64-8cec-1db9ecb3cb55.tex
 --------------
 Please direct all communication/issues to: 
 	https://github.com/cmhughes/latexindent.pl
